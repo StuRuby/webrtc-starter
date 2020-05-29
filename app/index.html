@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Really peer connection</title>
+    <link href="./css/main.css" />
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>
+          <div>
+            <label>RoomId:</label>
+            <input id="room" type="input" />
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div>
+            <button id="join" onclick="gotoNextPage()" >Join</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+	<script language="javascript" type="text/javascript">
+			function gotoNextPage(){
+				var roomid = document.querySelector('input#room');
+				if(roomid.value === null || roomid.value === ''){
+					alert('roomid is null');
+				}else {
+					window.location.href="room.html?room="+ roomid.value;
+				}
+			}
+</script>

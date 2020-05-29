@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebRTC PeerConnection</title>
+    <link href="./css/main.css" />
+  </head>
+  <body>
+    <div>
+      <div>
+        <button id="connect_server">连接信令服务器</button>
+        <button id="leave" disabled>离开</button>
+      </div>
+      <div>
+        <input id="share_desk" type="checkbox" />
+        <label for="share_desk">分享屏幕</label>
+      </div>
+      <div id="preview">
+        <div>
+          <h2>本地:</h2>
+          <video id="local_video" autoplay playsinline muted></video>
+          <h2>Offer SDP</h2>
+          <textarea id="offer"></textarea>
+        </div>
+        <div>
+          <h2>远端:</h2>
+          <video id="remote_video" autoplay playsinline></video>
+          <h2>Answer SDP</h2>
+          <textarea id="answer"></textarea>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src='./js/main.js'></script>
